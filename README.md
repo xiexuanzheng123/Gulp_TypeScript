@@ -6,4 +6,6 @@ Gulp_TypeScropt
       * 创建任务tsc用来将typescript文件编译成javascript文件<br>
       * 实现自动编译
 ### 引用BrowerSync实现自动刷新浏览器
+```
      browser-sync start --sever --files 'index.html'
+```
