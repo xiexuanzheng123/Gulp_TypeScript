@@ -1,4 +1,4 @@
-Gulp_TypeScropt
+Gulp_TypeScript
 =================
 ### the purpose is learning `typescript` language && the using method of `gulp`
 
@@ -7,5 +7,5 @@ Gulp_TypeScropt
       * 实现自动编译
 ### 引用BrowerSync实现自动刷新浏览器
 ```
-     browser-sync start --sever --files 'index.html'
+     browser-sync start --server --files 'index.html'
 ```
