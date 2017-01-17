@@ -1,4 +1,4 @@
-interface StringValidator {
+/*interface StringValidator {
     isAcceptable(s: string): boolean;
 }
 var lettersRegexp = /^[A-Za-z]+$/;
@@ -23,4 +23,4 @@ strings.forEach(s => {
     for(var name in validators) {
         console.log("" + s + "" + (validators[name].isAcceptable(s) ? " matches " : " does not match ") + name);
     }
-});
+});*/

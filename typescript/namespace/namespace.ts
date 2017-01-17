@@ -1,4 +1,4 @@
-namespace Validation {
+/*namespace Validation {
     export interface StringValidator {
         isAcceptable(s: string): boolean;
     }
@@ -29,4 +29,4 @@ strings.forEach(s=> {
     for( var name in validators) {
         console.log(`"${ s }" - ${ validators[name].isAcceptable(s) ? "matches":"does not match"} ${ name }`);
     }
-})
+})*/

@@ -1,32 +1,32 @@
-var Validation;
-(function (Validation) {
-    var lettersRegexpp = /^[A-Za-z]+$/;
-    var numberRegexpp = /^[0-9]+$/;
-    var LettersOnlyValidator = (function () {
-        function LettersOnlyValidator() {
-        }
-        LettersOnlyValidator.prototype.isAcceptable = function (s) {
+/*namespace Validation {
+    export interface StringValidator {
+        isAcceptable(s: string): boolean;
+    }
+
+    const lettersRegexpp = /^[A-Za-z]+$/;
+    const numberRegexpp = /^[0-9]+$/;
+
+    export class LettersOnlyValidator implements StringValidator {
+        isAcceptable(s: string) {
             return lettersRegexpp.test(s);
-        };
-        return LettersOnlyValidator;
-    }());
-    Validation.LettersOnlyValidator = LettersOnlyValidator;
-    var ZipCodeValidator = (function () {
-        function ZipCodeValidator() {
         }
-        ZipCodeValidator.prototype.isAcceptable = function (s) {
+    }
+
+    export class ZipCodeValidator implements StringValidator {
+        isAcceptable(s: string) {
             return s.length === 5 && numberRegexpp.test(s);
-        };
-        return ZipCodeValidator;
-    }());
-    Validation.ZipCodeValidator = ZipCodeValidator;
-})(Validation || (Validation = {}));
-var strings = ["Hello", "95545", "101"];
-var validators = {};
+        }
+    }
+
+}
+
+var strings = ["Hello","95545","101"];
+var validators: {[s: string]: Validation.StringValidator; } = {};
 validators["ZIP code"] = new Validation.ZipCodeValidator();
 validators["Letters only"] = new Validation.LettersOnlyValidator();
-strings.forEach(function (s) {
-    for (var name in validators) {
-        console.log("\"" + s + "\" - " + (validators[name].isAcceptable(s) ? "matches" : "does not match") + " " + name);
+
+strings.forEach(s=> {
+    for( var name in validators) {
+        console.log(`"${ s }" - ${ validators[name].isAcceptable(s) ? "matches":"does not match"} ${ name }`);
     }
-});
+})*/
